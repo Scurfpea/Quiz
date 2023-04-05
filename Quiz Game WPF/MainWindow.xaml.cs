@@ -87,7 +87,7 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 1";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Three Legged Downward Facing Dog";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
@@ -101,11 +101,11 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 2";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Answer 2 ";
                     ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans4.Content = "Lotus Pose";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/2.PNG"));
 
@@ -115,12 +115,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 3";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans1.Content = "Downward Facing Dog";
+                    ans2.Content = "Answer 2";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
-                    ans2.Tag = "1";
+                    ans1.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/3.PNG"));
 
@@ -130,11 +130,11 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 4";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Tree Poses";
                     ans4.Content = "Answer 4";
 
-                    ans2.Tag = "1";
+                    ans3.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/4.PNG"));
 
@@ -145,11 +145,11 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 5";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Answer 2";
                     ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans4.Content = "Garland  Yogi Squat";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/5.PNG"));
 
@@ -159,12 +159,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 6";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans1.Content = "Wide Childs Poses";
+                    ans2.Content = "Answer 2";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
-                    ans2.Tag = "1";
+                    ans1.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/6.PNG"));
 
@@ -175,7 +175,7 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 7";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Upward Dog";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
@@ -190,11 +190,11 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 8";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Answer 2";
                     ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans4.Content = "Pigeon Pose";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/8.PNG"));
 
@@ -205,11 +205,11 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 9";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Cow Pose";
                     ans4.Content = "Answer 4";
 
-                    ans2.Tag = "1";
+                    ans3.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/9.PNG"));
 
@@ -219,12 +219,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 10";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans1.Content = "Bound Angle";
+                    ans2.Content = "Answer 2";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
-                    ans2.Tag = "1";
+                    ans1.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/10.PNG"));
 
@@ -235,11 +235,11 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 11";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Answer 2";
                     ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans4.Content = "Flower Pose";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/11.PNG"));
 
@@ -250,7 +250,7 @@ namespace Quiz_Game_WPF
                     txtQuestion.Text = "Question 12";
 
                     ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
+                    ans2.Content = "Seated Meditation Pose";
                     ans3.Content = "Answer 3";
                     ans4.Content = "Answer 4";
 
