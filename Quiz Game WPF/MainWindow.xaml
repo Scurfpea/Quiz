@@ -11,8 +11,8 @@
         <Label Name= "scoreText" FontSize = "18">Score: 0/10</Label>
         <Label Name= "questionOrder" FontSize = "18" Canvas.Left="329">Score: Questions</Label>
 
-        <Image Name="qImage" Source="Images/1.png" Stretch="Uniform" Height= "286" Width= "572" />
-        <TextBlock Name="txtQuestion" TextAlignment="Center" Padding="3" FontSize="20" Width =" 572" TextWrapping="Wrap" Canvas.Left="104" Canvas.Top="330">
+        <Image Name="qImage" Source="Images/1.png" Stretch="Uniform" Height= "286" Width= "572" Canvas.Left="124" Canvas.Top="91" />
+        <TextBlock Name="txtQuestion" TextAlignment="Center" Padding="3" FontSize="20" Width =" 572" TextWrapping="Wrap" Canvas.Left="104" Canvas.Top="375" HorizontalAlignment="Center" VerticalAlignment="Top">
             Det er quiz tid. Klik på en af knapperne for at svare på spørgsmålet.
         </TextBlock>
 

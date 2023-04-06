@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +23,18 @@ namespace Quiz_Game_WPF
     {
         List<int> questionsNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 
+        string[] yogaPositions = {"Three Legged Downward Facing Dog", "Lotus Pose", "Downward Facing Dog", "Tree Poses", "Garland Yogi Squat", "Wide Child's Poses", "Upward Dog", "Pigeon Pose", "Cow Pose", "Bound Angle", "Flower Pose", "Seated Meditation Pose" };
+
         int qNum = 0;
 
         int i;
 
         int score;
+
+        int ansNum1 = 0;
+        int ansNum2 = 0;
+        int ansNum3 = 0;
+        int ansNum4 = 0;
         
         public MainWindow()
         {
@@ -64,6 +72,49 @@ namespace Quiz_Game_WPF
             StartGame();
         }
 
+        
+        private void RandomizeAnswer1()
+        {
+            Random random = new Random();
+            do
+            {
+                ansNum1 = random.Next(1, 12);
+                ans1.Content = yogaPositions[ansNum1];
+            }
+            while (ansNum1 == i-1 || ansNum1 == ansNum3 || ansNum1 == ansNum2 || ansNum1 == ansNum4);//minus 1 because the arrays starts at 0                    
+        }
+
+        private void RandomizeAnswer2()
+        {
+            Random random = new Random();
+            do
+            {
+                ansNum2 = random.Next(1, 12);
+                ans2.Content = yogaPositions[ansNum2];
+            }
+            while (ansNum2 == i-1 || ansNum2 == ansNum1 || ansNum2 == ansNum3 || ansNum2 == ansNum4);                              
+        }
+
+        private void RandomizeAnswer3()
+        {            
+            Random random = new Random();
+            do
+            {
+                ansNum3 = random.Next(1, 12);
+                ans3.Content = yogaPositions[ansNum3];
+            }
+            while (ansNum3 == i-1 || ansNum3 == ansNum1 || ansNum3 == ansNum2 || ansNum3 == ansNum4); //i is current question                    
+        }
+        private void RandomizeAnswer4()
+        {
+            Random random = new Random();
+            do
+            {
+                ansNum4 = random.Next(1, 12);
+                ans4.Content = yogaPositions[ansNum4];
+            }
+            while (ansNum4 == i-1 || ansNum4 == ansNum1 || ansNum4 == ansNum2 || ansNum4 == ansNum3);
+        }
         private void NextQuestion()
         {
             if(qNum < questionsNumbers.Count)
@@ -84,13 +135,14 @@ namespace Quiz_Game_WPF
             {
                 case 1:
 
-                    txtQuestion.Text = "Question 1";
+                    txtQuestion.Text = "Question 1";                   
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
-
+                    RandomizeAnswer1();
+                    ans2.Content = "Three Legged Downward Facing Dog";
+                    RandomizeAnswer3();
+                    RandomizeAnswer4();                    
+                   
+               
                     ans2.Tag = "1"; //which of the ans is correct if ans2 is correct write ans2.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/1.PNG"));
@@ -100,12 +152,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 2";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();                    
+                    ans4.Content = "Lotus Pose";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/2.PNG"));
 
@@ -115,12 +167,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 3";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans1.Content = "Downward Facing Dog";                  
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();
+                    RandomizeAnswer4();
 
-                    ans2.Tag = "1";
+                    ans1.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/3.PNG"));
 
@@ -129,12 +181,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 4";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();
+                    RandomizeAnswer2();
+                    ans3.Content = "Tree Poses";
+                    RandomizeAnswer4();
 
-                    ans2.Tag = "1";
+                    ans3.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/4.PNG"));
 
@@ -144,12 +196,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 5";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();                    
+                    ans4.Content = "Garland  Yogi Squat";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/5.PNG"));
 
@@ -159,12 +211,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 6";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans1.Content = "Wide Childs Poses";
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();
+                    RandomizeAnswer4();
 
-                    ans2.Tag = "1";
+                    ans1.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/6.PNG"));
 
@@ -174,10 +226,10 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 7";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();                    
+                    ans2.Content = "Upward Dog";                    
+                    RandomizeAnswer3();
+                    RandomizeAnswer4();
 
                     ans2.Tag = "1";
 
@@ -189,12 +241,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 8";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();
+                    ans4.Content = "Pigeon Pose";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/8.PNG"));
 
@@ -204,12 +256,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 9";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();
+                    RandomizeAnswer2();                    
+                    ans3.Content = "Cow Pose";
+                    RandomizeAnswer4();
 
-                    ans2.Tag = "1";
+                    ans3.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/9.PNG"));
 
@@ -219,12 +271,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 10";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    ans1.Content = "Bound Angle";
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();
+                    RandomizeAnswer4();
 
-                    ans2.Tag = "1";
+                    ans1.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/10.PNG"));
 
@@ -234,12 +286,12 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 11";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();
+                    RandomizeAnswer2();
+                    RandomizeAnswer3();
+                    ans4.Content = "Flower Pose";
 
-                    ans2.Tag = "1";
+                    ans4.Tag = "1";
 
                     qImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/11.PNG"));
 
@@ -249,10 +301,10 @@ namespace Quiz_Game_WPF
 
                     txtQuestion.Text = "Question 12";
 
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
+                    RandomizeAnswer1();                    
+                    ans2.Content = "Seated Meditation Pose";
+                    RandomizeAnswer3();
+                    RandomizeAnswer4();
 
                     ans2.Tag = "1";
 
